@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mind Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3407/3407033.png">
+</head>
+<body>
+    <h1 class="start-sub">
+  A modern interactive quiz app with timer, scoring system, and animations.
+    </h1>
+<div class="container">
+
+  <!-- START SCREEN -->
+  <div class="screen active" id="startScreen">
+    <div class="start-screen">
+      <span class="start-label">Knowledge Challenge</span>
+      <div class="start-title">MIND<br><span>QUIZ</span></div>
+      <p class="start-sub">Test your knowledge across science, history,<br>geography, and pop culture.</p>
+      <div class="stats-row">
+        <div class="stat-item"><span class="stat-num">10</span><span class="stat-lbl">Questions</span></div>
+        <div class="stat-item"><span class="stat-num">20s</span><span class="stat-lbl">Per Q</span></div>
+        <div class="stat-item"><span class="stat-num">4</span><span class="stat-lbl">Topics</span></div>
+      </div>
+      <button class="btn-primary" onclick="startQuiz()">START QUIZ</button>
+    </div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="screen" id="quizScreen">
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+    <div class="quiz-header">
+      <div class="q-counter">Q <strong id="qNum">1</strong> / 10</div>
+      <div class="timer-ring" id="timerRing">
+        <svg viewBox="0 0 48 48" width="48" height="48">
+          <circle class="timer-bg" cx="24" cy="24" r="20"/>
+          <circle class="timer-fill" id="timerCircle" cx="24" cy="24" r="20"
+            stroke-dasharray="125.66" stroke-dashoffset="0"/>
+        </svg>
+        <span class="timer-num" id="timerNum">20</span>
+      </div>
+      <div class="score-badge">Score <span id="liveScore">0</span></div>
+    </div>
+
+    <div class="question-card">
+      <span class="category-tag" id="qCategory">Science</span>
+      <div class="question-text" id="qText">Question goes here</div>
+    </div>
+
+    <div class="options-grid" id="optionsGrid"></div>
+
+    <div class="feedback-bar" id="feedbackBar">
+      <span id="feedbackMsg"></span>
+      <span class="fb-right" id="feedbackHint"></span>
+    </div>
+
+    <button class="btn-next" id="nextBtn" onclick="nextQuestion()">NEXT QUESTION →</button>
+  </div>
+
+  <!-- RESULT SCREEN -->
+  <div class="screen" id="resultScreen">
+    <div class="result-screen">
+      <div class="result-graphic" id="resultGraphic" style="--pct: 0deg">
+        <span id="resultEmoji">🏆</span>
+      </div>
+      <div class="result-title" id="resultTitle">WELL DONE!</div>
+      <p class="result-sub" id="resultSub">You completed the quiz!</p>
+      <div class="result-score-big" id="resultPct">0%</div>
+      <div class="result-score-lbl">Final Score</div>
+      <div class="result-stats">
+        <div class="res-stat"><span class="res-num correct-color" id="rCorrect">0</span><span class="res-lbl">Correct</span></div>
+        <div class="res-stat"><span class="res-num wrong-color" id="rWrong">0</span><span class="res-lbl">Wrong</span></div>
+        <div class="res-stat"><span class="res-num neutral-color" id="rPoints">0</span><span class="res-lbl">Points</span></div>
+      </div>
+      <button class="btn-restart" onclick="restartQuiz()">PLAY AGAIN</button>
+    </div>
+  </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+
+</html>
