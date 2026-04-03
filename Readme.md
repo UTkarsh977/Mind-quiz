@@ -1,99 +1,170 @@
  🧠 Interactive Quiz Application
+ 
 COMPANY - CODTECH IT SOLUTIONS
+
 NAME: UTKARSH KHANDELWAL
+
 INTERN ID: CTIS7615
+
 DOMAIN: FRONTEND WEB DEVELOPMENT
+
 DURATION: 8 WEEKS
+
 MENTOR: NEELA SANTOSH
 
-A modern interactive quiz application built using HTML, CSS, and JavaScript.
+# 🚀 Interactive Quiz Application
 
-## 🚀 Features
-* ⏱️ Timer with circular animation
-* 📊 Progress tracking
-* 🔊 Sound effects
-* 🎉 Confetti celebration
-* 🔥 Streak-based scoring system
-* 💻 Clean and modern UI
+A modern and engaging **Interactive Quiz Application** built using HTML, CSS, and Vanilla JavaScript. This project combines clean UI design with dynamic functionality, delivering a smooth and immersive quiz experience for users.
 
+---
+
+## 🎯 Overview
+
+This application allows users to log in with a username, attempt a quiz with timed questions, and receive instant feedback along with a detailed result summary. It is designed to simulate a real-world quiz environment with gamification elements like scoring, streaks, and animations.
+
+The project focuses on both **user experience (UI/UX)** and **core frontend development concepts**, making it a strong portfolio project.
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication System
+
+* Simple login system using **localStorage**
+* Username is saved and reused (auto-login feature)
+* Logout functionality to reset session
+
+  
 ## 🛠️ Technologies Used
-🛠️ Technologies Used (Detailed)
-📄 HTML (Structure)
-Used semantic HTML5 elements to create a well-structured layout.
-Designed multiple screens including start screen, quiz screen, and result screen.
-Implemented dynamic containers for:
-Question display
-Answer options
-Timer and progress bar
-Score and feedback
-Used buttons and interactive elements for user actions like:
-Starting quiz
-Selecting answers
-Navigating between questions
-Integrated SVG elements for circular timer animation.
-Maintained clean and readable markup for better scalability and maintenance.
+
+### 📄 HTML
+
+* Structured layout using semantic elements
+* Multiple screens (Login, Start, Quiz, Result)
+* Dynamic content containers
+
+### 🎨 CSS
+
+* Custom dark theme with variables
+* Flexbox & responsive layout
+* Animations (fade, glow, transitions)
+* Styled components (cards, buttons, progress bar)
+
+### ⚙️ JavaScript
+
+* Core quiz logic using Vanilla JS
+* DOM manipulation and event handling
+* State management system
+* Timer and scoring algorithms
+* localStorage for authentication and persistence
+### 🧠 Quiz Functionality
+
+* Dynamic and randomized questions
+* Multiple categories (Science, Tech, History, etc.)
+* Interactive multiple-choice questions
+* Instant feedback (correct/wrong answers)
+
+### ⏱️ Timer System
+
+* 20-second timer per question
+* Circular animated countdown
+* Auto-submit on timeout
+
+### 🎯 Scoring System
+
+* Time-based scoring (faster answers = more points)
+* Streak-based bonus system
+* Real-time score updates
+
+### 📊 Progress Tracking
+
+* Visual progress bar
+* Question counter
+* Live score display
+
+### 🏆 Result Screen
+
+* Final score percentage
+* Correct / Wrong / Points breakdown
+* Performance-based messages (Legendary, Well Done, etc.)
+* Confetti animation for high scores
+
+### 🔊 Interactive Experience
+
+* Sound effects for:
+
+  * Correct answers
+  * Wrong answers
+  * Button clicks
+
+### 🎨 UI/UX Design
+
+* Modern dark theme
+* Smooth animations and transitions
+* Glassmorphism-style login UI
+* Typing animation on title
+* Glow effect on heading text
+
+---
 
 
 
-🎨 CSS (Styling & UI Design)
-Designed a modern dark-themed UI for a premium look and feel.
-Used Flexbox and alignment techniques for proper layout and responsiveness.
-Applied smooth animations and transitions for:
-Screen switching
-Button hover effects
-Option selection feedback
-Styled components such as:
-Cards (question container)
-Buttons (primary, next, restart)
-Progress bar and timer ring
-Implemented visual feedback styles:
-Correct answer (green highlight)
-Wrong answer (red highlight)
-Added typography styling using custom fonts for better readability.
-Used spacing, opacity, and hierarchy to maintain a clean UI/UX.
-Included animation effects like fade-in, glow, and transitions for a modern experience.
+---
 
+## 📂 Project Structure
 
+```bash
+Interactive-Quiz-App/
+│── index.html
+│── style.css
+│── script.js
+│── correct.mp3
+│── wrong.mp3
+│── click.mp3
+```
 
-⚙️ JavaScript (Logic & Interactivity)
-Implemented core quiz logic using Vanilla JavaScript (no frameworks).
-Created a dynamic question system:
-Randomized questions using shuffle logic
-Loaded questions dynamically into the DOM
-Built a state management system to track:
-Current question
-Score
-Correct and wrong answers
-Time left
-Streak count
-Developed a timer system with real-time countdown and auto-submit on timeout.
-Implemented streak-based and time-based scoring logic to enhance engagement.
-Added event handling for:
-Answer selection
-Button clicks
-Navigation between questions
-Integrated instant feedback system:
-Highlight correct and incorrect answers
-Display correct answer when wrong
-Built a progress tracking system using a dynamic progress bar.
-Created a detailed result screen logic:
-Score calculation
-Percentage evaluation
-Performance-based messages
-Integrated sound effects for better user interaction.
-Added confetti animation trigger for high scores.
-Ensured smooth transitions between screens using DOM manipulation.
-## 📸 Screenshots
+---
 
+## 🚀 How to Run
 
+1. Download or clone the repository
+2. Open the project folder
+3. Run `index.html` using Live Server or browser
 
-<img width="700" height="632" alt="Screenshot 2026-04-03 115125" src="https://github.com/user-attachments/assets/87a9d111-652f-49f8-8d93-dabfc8a676a9" />
+Screenshots
 
-<img width="700" height="669" alt="image" src="https://github.com/user-attachments/assets/a8449366-fa00-4d8b-b47c-6c42802a735c" />
-<img width="700" height="720" alt="image" src="https://github.com/user-attachments/assets/cdac20ec-9295-48fe-8291-0c86c0ebcff6" />
+<img width="780" height="542" alt="image" src="https://github.com/user-attachments/assets/33927728-5902-4e48-a6bd-2e97a8c61bc1" />
+<img width="728" height="584" alt="image" src="https://github.com/user-attachments/assets/b31937d4-eec5-4588-be08-9bc34c0b9246" />
 
+<img width="712" height="690" alt="image" src="https://github.com/user-attachments/assets/64294efc-7af3-4774-a13c-2a4046426bf6" />
 
+---
+
+## 🌐 Future Enhancements
+
+* 🏆 Online leaderboard (with backend)
+* 👤 User profiles and avatars
+* 📱 Fully responsive mobile design
+* 🌍 API-based dynamic questions
+* 🔐 Secure authentication system (Node.js + database)
+
+---
+
+## 💯 Project Highlights
+
+* Fully functional frontend application
+* Clean UI with modern design trends
+* Real-time interactivity without frameworks
+* Demonstrates strong fundamentals of web development
+  
 
 ## 👨‍💻 Author
 
 Utkarsh Khandelwal
+
+---
+
+
+---
+
+🔥 This project showcases the ability to build a **complete interactive web application** using core technologies, making it ideal for portfolios, internships, and frontend development roles.
