@@ -35,6 +35,32 @@ function showScreen(id) {
   document.getElementById(id).classList.add('active');
 }
 
+function login() {
+  
+  const input = document.getElementById("username");
+
+  if (!input) {
+    console.error("Input not found ❌");
+    return;
+  }
+
+  const username = input.value.trim();
+
+  console.log("Username:", username);
+
+  if (!username) {
+    alert("Enter username");
+    input.focus(); // 🔥 better UX
+
+    return;
+  }
+
+  localStorage.setItem("user", username);
+
+  showScreen("startScreen");
+
+  
+}
 /* ─── QUIZ FLOW ───────────────────────────────────── */
 function startQuiz() {
     playSound(clickSound); 
@@ -215,6 +241,9 @@ function showResults() {
   document.getElementById('resultTitle').textContent = title;
   document.getElementById('resultSub').textContent = sub;
   document.getElementById('resultPct').textContent = pct + '%';
+  document.getElementById('rCorrect').textContent = state.correct;
+  document.getElementById('rWrong').textContent   = state.wrong;
+  document.getElementById('rPoints').textContent  = state.score;
 
   // 🎉 CONFETTI (ADD THIS PART)
   if (pct >= 70) {
@@ -231,9 +260,61 @@ function showResults() {
 
   showScreen('resultScreen');
 }
+function typeEffect() {
+  const text = "APPLICATION";
+  const el = document.getElementById("typingText");
 
+  let index = 0;
+  el.textContent = "";
+
+  function type() {
+    if (index < text.length) {
+      el.textContent += text[index];
+      index++;
+      setTimeout(type, 80);
+    }
+  }
+
+  type();
+}
 function restartQuiz() {
   showScreen('startScreen');
 }
 window.restartQuiz = restartQuiz;
+document.addEventListener("DOMContentLoaded", () => {
+  const user = localStorage.getItem("user");
+
+  if (user) {
+    showScreen("startScreen");
+  } else {
+    showScreen("authScreen");
+  }
+
+  // 🔥 Ensure login is globally available
+  window.login = login;
+});
+document.addEventListener("DOMContentLoaded", () => {
+  typeEffect();
+
+  const user = localStorage.getItem("user");
+
+  if (user) {
+    showScreen("startScreen");
+  } else {
+    showScreen("authScreen");
+  }
+});
+
+  // logout
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.onclick = () => {
+      localStorage.removeItem("user");
+      showScreen("authScreen");
+    };
+  }
+
+  // login global
+  window.login = login;
+
 
