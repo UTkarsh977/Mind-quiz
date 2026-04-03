@@ -11,22 +11,60 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3407/3407033.png">
 </head>
 <body>
-    <h1 class="start-sub">
-  A modern interactive quiz app with timer, scoring system, and animations.
-    </h1>
+
 <div class="container">
 
+  <!-- LOGIN SCREEN -->
+ <div class="screen active" id="authScreen">
+
+  <!-- 🔥 TITLE ABOVE -->
+  <div class="auth-header">
+    <div class="auth-title-main">
+      QUIZ<br><span id="typingText">APPLICATION</span>
+    </div>
+  </div>
+
+  <!-- 🔐 LOGIN BOX -->
+  <div class="auth-box">
+    <h2 class="auth-title">Welcome 👋</h2>
+    <p class="auth-sub">Enter your name to start the quiz</p>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="login()" class="auth-btn">Continue</button>
+  </div>
+
+</div>
+
   <!-- START SCREEN -->
-  <div class="screen active" id="startScreen">
+  <div class="screen" id="startScreen">
     <div class="start-screen">
+      <button id="logoutBtn" class="logout-btn">Logout</button>
       <span class="start-label">Knowledge Challenge</span>
-      <div class="start-title">MIND<br><span>QUIZ</span></div>
-      <p class="start-sub">Test your knowledge across science, history,<br>geography, and pop culture.</p>
-      <div class="stats-row">
-        <div class="stat-item"><span class="stat-num">10</span><span class="stat-lbl">Questions</span></div>
-        <div class="stat-item"><span class="stat-num">20s</span><span class="stat-lbl">Per Q</span></div>
-        <div class="stat-item"><span class="stat-num">4</span><span class="stat-lbl">Topics</span></div>
+
+      <div class="start-title">
+        QUIZ<br><span>APPLICATION</span>
       </div>
+
+      <p class="start-sub">
+        Test your knowledge across science, history,<br>
+        geography, and pop culture.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num">10</span>
+          <span class="stat-lbl">Questions</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">20s</span>
+          <span class="stat-lbl">Per Q</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-lbl">Topics</span>
+        </div>
+      </div>
+
       <button class="btn-primary" onclick="startQuiz()">START QUIZ</button>
     </div>
   </div>
