@@ -3,8 +3,6 @@
 A modern interactive quiz application built using HTML, CSS, and JavaScript.
 
 ## 🚀 Features
-
-* 🎯 Multiple category questions
 * ⏱️ Timer with circular animation
 * 📊 Progress tracking
 * 🔊 Sound effects
