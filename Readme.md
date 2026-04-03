@@ -20,7 +20,9 @@ A modern interactive quiz application built using HTML, CSS, and JavaScript.
 
 ## 📸 Screenshots
 
-(Add screenshots here)
+
+
+<img width="1459" height="632" alt="Screenshot 2026-04-03 115125" src="https://github.com/user-attachments/assets/87a9d111-652f-49f8-8d93-dabfc8a676a9" />
 
 ## 🌐 Live Demo
 
